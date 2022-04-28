@@ -1,0 +1,11 @@
+.vs/
+_ReSharper.Caches/
+packages/
+bin
+obj
+TestResults/
+*.user
+*.tmp
+~backup/
+~docs/.gitignore
+

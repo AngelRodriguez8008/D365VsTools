@@ -48,7 +48,7 @@ namespace D365VsTools.VisualStudio
                 IVsOutputWindowPane pane;
                 _outputWindow.GetPane(ref windowGuid, out pane);
                 pane.Activate();
-                pane.OutputString(message);
+                pane.OutputStringThreadSafe(message);
             }
             catch (Exception e)
             {

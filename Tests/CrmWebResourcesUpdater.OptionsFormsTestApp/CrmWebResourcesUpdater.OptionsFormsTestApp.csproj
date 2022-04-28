@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CrmWebResourcesUpdater.OptionsFormsTestApp</RootNamespace>
     <AssemblyName>CrmWebResourcesUpdater.OptionsFormsTestApp</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -161,9 +161,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\CrmWebResourcesUpdater\D365-VS-Tools.Package.csproj">
+    <ProjectReference Include="..\..\D365VsTools\D365VsTools.Package.csproj">
       <Project>{d903d192-561e-49a4-91f4-e900ab626941}</Project>
-      <Name>D365-VS-Tools.Package</Name>
+      <Name>D365VsTools.Package</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

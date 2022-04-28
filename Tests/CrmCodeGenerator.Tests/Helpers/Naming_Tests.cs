@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using CrmCodeGenerator.VSPackage.Helpers;
+using D365VsTools.CodeGenerator.Helpers;
 
 namespace CrmCodeGenerator.Tests
 {

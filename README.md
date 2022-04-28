@@ -1,16 +1,22 @@
 # Microsoft Dynamics 365 / Power App Tools for Visual Studio
 
-Microsoft Dynamics Crm Web Resources Updater gives you an easy way to update and publish web resources directly from Visual Studio
+Microsoft Dynamics 365 / Power App Tools gives you an easy way to generate code, update and publish web resources directly from Visual Studio.
 
 ### Credits
 
   + Marat Deykun - [Blog](http://happycrm.blogspot.com/p/crm-publisher.html)
 	+ Base code: https://archive.codeplex.com/?p=crmupdater
     + Base Installer & Documentation: [Visual Studio Gallery](https://marketplace.visualstudio.com/items?itemName=MaratVDeykun.MicrosoftDynamicsCRMWebResourcesUpdater)
-  + My Additions:
-	+D365-VS-Tools Add/Update JavaScript File Version on file upload	
-    + Update CRM Solution Version on file upload
+ 
 
+  + Dynamics CRM Code Generator for Visual Studio
+    + forked from [xairrick/CrmCodeGenerator](https://github.com/xairrick/CrmCodeGenerator)
+
+ + My Additions (D365-VS-Tools)
+    + Add/Update JavaScript File Version on file upload	
+    + Update CRM Solution Version on file upload    
+    + JSON Based selection of Entities & Attributes with configurable Code Names.
+    + Integrarion of [MscrmTools.Xrm.Connection (from XrmToolKit)](https://github.com/MscrmTools/MscrmTools.Xrm.Connection)
 
 #### JavaScript File Version
 Add/Update File Version (Date/Time as Comment) into each JavaScript Files each time before upload. (Just if file content change)

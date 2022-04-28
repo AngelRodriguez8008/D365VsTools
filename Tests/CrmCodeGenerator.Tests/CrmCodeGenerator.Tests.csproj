@@ -8,7 +8,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CrmCodeGenerator.Tests</RootNamespace>
     <AssemblyName>CrmCodeGenerator.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -62,18 +62,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CrmCodeGenerator.VSPackage\CrmCodeGenerator.VSPackage.csproj">
-      <Project>{474A5BC2-BEFF-4F74-A029-7ED81B6633A8}</Project>
-      <Name>CrmCodeGenerator.VSPackage</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.VisualStudio.Shell.15.0">
-      <Version>15.9.28307</Version>
-    </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\D365VsTools\D365VsTools.Package.csproj">
+      <Project>{d903d192-561e-49a4-91f4-e900ab626941}</Project>
+      <Name>D365VsTools.Package</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
