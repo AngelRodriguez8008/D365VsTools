@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <Extern href="stdidcmd.h" />
+  <Extern href="vsshlids.h" />
+  <Include href="KnownImageIds.vsct" />
+  <Commands package="guidD365VsTools">
+    <Groups>
+      <Group guid="guidD365VsToolsProjectCmdSet" id="ProjectNodeMenu" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_PROJNODE" />
+      </Group>
+      <Group guid="guidD365VsToolsItemCmdSet" id="ItemNodeMenu" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE" />
+      </Group>
+    </Groups>
+    <Buttons>
+      <Button guid="guidD365VsToolsProjectCmdSet" id="UpdateWebResourcesId" priority="0x0100" type="Button">
+        <Parent guid="guidD365VsToolsProjectCmdSet" id="ProjectNodeMenu" />
+        <Icon guid="guidUpdateImage" id="uploadButtonImage" />
+        <Strings>
+          <ButtonText>Update Web Resources</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidD365VsToolsProjectCmdSet" id="OpenOptions" priority="0x0100" type="Button">
+        <Parent guid="guidD365VsToolsProjectCmdSet" id="ProjectNodeMenu" />
+        <Icon guid="guidOptionsImage" id="optionsButtonImage" />
+        <Strings>
+          <ButtonText>Configure D365-VS-Tools</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidD365VsToolsItemCmdSet" id="UpdateSelectedWebResourcesId" priority="0x0200" type="Button">
+        <Parent guid="guidD365VsToolsItemCmdSet" id="ItemNodeMenu" />
+        <Icon guid="guidUpdateImage" id="uploadButtonImage" />
+        <Strings>
+          <ButtonText>Update Web Resource(s)</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidD365VsToolsItemCmdSet" id="CreateWebResourceId" priority="0x0100" type="Button">
+        <Parent guid="guidD365VsToolsItemCmdSet" id="ItemNodeMenu" />
+        <Icon guid="guidCreateImage" id="createButtonImage" />
+        <Strings>
+          <ButtonText>Create Web Resource</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidD365VsToolsItemCmdSet" id="GenerateCodeId" priority="0x0300" type="Button">
+        <Parent guid="guidD365VsToolsItemCmdSet" id="ItemNodeMenu"/>
+        <Icon guid="ImageCatalogGuid" id="TriggerScript"/>
+        <CommandFlag>IconIsMoniker</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Generate Code</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+    <Bitmaps>
+      <Bitmap guid="guidUpdateImage" href="Resources\Upload.png" usedList="uploadButtonImage" />
+      <Bitmap guid="guidOptionsImage" href="Resources\Options.png" usedList="optionsButtonImage" />
+      <Bitmap guid="guidCreateImage" href="Resources\Create.png" usedList="createButtonImage" />
+    </Bitmaps>
+  </Commands>
+
+  <VisibilityConstraints>
+    <VisibilityItem guid="guidD365VsToolsItemCmdSet" id="GenerateCodeId"  context="guidUIContext"/>
+  </VisibilityConstraints>
+
+  <Symbols>
+    <!-- This is the package guid. -->
+    <GuidSymbol name="guidD365VsTools" value="{944f3eda-3d74-49f0-a2d4-a25775f1ab35}" />
+    <GuidSymbol name="guidUIContext" value="{69760bd3-80f0-4901-818d-c4656aaa08e9}" />
+
+    <!-- This is the guid used to group the menu commands together -->
+    <GuidSymbol name="guidD365VsToolsProjectCmdSet" value="{e51702bf-0cd0-413b-87ba-7d267eecc6c1}">
+      <IDSymbol value="0x1020" name="ProjectNodeMenu"  />
+      <IDSymbol value="0x0100" name="UpdateWebResourcesId"  />
+      <IDSymbol value="0x0200" name="OpenOptions" />
+    </GuidSymbol>
+    <GuidSymbol name="guidD365VsToolsItemCmdSet" value="{AE7DC0B9-634A-46DB-A008-D6D15DD325E1}">
+      <IDSymbol value="0x1030" name="ItemNodeMenu" />
+      <IDSymbol value="0x0400" name="CreateWebResourceId" />
+      <IDSymbol value="0x0300" name="UpdateSelectedWebResourcesId" />
+      <IDSymbol value="0x0500" name="GenerateCodeId" />
+    </GuidSymbol>
+    <GuidSymbol name="guidUpdateImage" value="{441ae41f-de66-45b6-8e19-94a38e5d39b6}">
+      <IDSymbol name="uploadButtonImage" value="1" />
+    </GuidSymbol>
+    <GuidSymbol value="{39365666-141c-4341-9505-cb76da0e2e60}" name="guidOptionsImage">
+      <IDSymbol name="optionsButtonImage" value="1" />
+    </GuidSymbol>
+    <GuidSymbol value="{484E60CC-ECA7-4C9E-B60E-318505FF8CEA}" name="guidCreateImage">
+      <IDSymbol name="createButtonImage" value="1" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
