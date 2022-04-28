@@ -4,7 +4,7 @@
 #endregion
 using System;
 using System.Configuration;
-using CrmCodeGenerator.VSPackage.Xrm;
+using D365VsTools.CodeGenerator;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Client;
 
